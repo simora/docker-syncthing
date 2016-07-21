@@ -9,7 +9,7 @@ RUN apt-get update && \
 
 RUN useradd -m syncthing
 
-RUN VERSION=`curl -s https://api.github.com/repos/syncthing/syncthing/releases/latest | jq -r '.tag_name'` && \
+RUN VERSION=v0.13.10 && \
     mkdir -p /go/src/github.com/syncthing && \
     cd /go/src/github.com/syncthing && \
     git clone https://github.com/syncthing/syncthing.git && \
